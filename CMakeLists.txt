@@ -10,4 +10,4 @@ add_executable(lab_c_
         zlab02.cpp
         zlab02.h
         zlab03.cpp
-        zlab03.h)
+        zlab03.h "Organizm/organizm.cpp" "Organizm/organizm.h")
