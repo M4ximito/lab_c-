@@ -30,5 +30,7 @@ public:
 	 bool potomek();
 	
 	 void krokSymulacji();
-	 
+	
+
+
 };
