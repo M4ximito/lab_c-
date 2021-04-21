@@ -1,7 +1,4 @@
 #include "zlab03.h"
-#include <iostream>
-
-using namespace std;
 
 bool Prostokat::czyPoprawny(double bok1, double bok2)
 {
@@ -10,7 +7,7 @@ bool Prostokat::czyPoprawny(double bok1, double bok2)
 
 void Prostokat::obliczObwod()
 {
-    obwod = 2 * ( bok1 + bok2 );
+    obwod = 2 * (bok1 + bok2);
 }
 
 void Prostokat::obliczPole()
@@ -19,24 +16,24 @@ void Prostokat::obliczPole()
 }
 
 Prostokat::Prostokat(string n, double a, double b)
-        :nazwa(n)
 {
-    poprawny = czyPoprawny(a,b);
+    poprawny = czyPoprawny(a, b);
 
-    if(poprawny){
+    if (poprawny) {
         bok1 = a;
         bok2 = b;
         obliczPole();
         obliczObwod();
-    }else{
+    }
+    else {
         bok1 = bok2 = pole = obwod = 0;
     }
+
 }
 
 Prostokat::~Prostokat()
 {
-    std::cout << "Prostokąt: " << nazwa
-              << " znika." << std::endl;
+    cout << "Prostokаt: " << nazwa << " znika." << endl;
 }
 
 bool Prostokat::czyPoprawny()
@@ -44,7 +41,7 @@ bool Prostokat::czyPoprawny()
     return poprawny;
 }
 
-const std::string &Prostokat::jakaNazwa()
+const string& Prostokat::jakaNazwa()
 {
     return nazwa;
 }
@@ -61,30 +58,29 @@ double Prostokat::podajObwod()
 
 bool Prostokat::zmienBoki(double a, double b)
 {
-    if(czyPoprawny(a,b)){
+    if (czyPoprawny(a, b)) {
         poprawny = true;
+
         bok1 = a;
         bok2 = b;
+
         obliczPole();
         obliczObwod();
+
         return true;
-    }return false;
+    }
+    else {
+        return false;
+    }
 }
 
 std::string Prostokat::doTekstu()
 {
-    std::string napis ="";
+    string napis = "";
+    napis = "Prostokat o nazwie: " + nazwa + " bok1=" + to_string(bok1) + " bok2=" + to_string(bok2);
 
-    napis = "Prostokąt o nazwie: " + nazwa
-            + " bok1=" + to_string(bok1)
-            + " bok2=" + to_string(bok2);
-
-    if(poprawny) napis += " obwód=" + to_string(obwod)
-                          + " pole=" + to_string(pole);
-    else napis +=" !Figura niepoprawna.";
+    if (poprawny) napis += " obwod=" + to_string(obwod) + " pole=" + to_string(pole);
+    else napis += " !Figura niepoprawna.";
 
     return napis;
 }
-
-
-
