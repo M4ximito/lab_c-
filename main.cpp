@@ -41,24 +41,21 @@ int main() {
     //lab02.zadanie_2_9();
      lab02.menu();
     --------------------------------------*/
-    Kwadrat kwadrat("Kwadrek", 4);
-    Prostokat prostokat("Prostak", 2, 4);
+        Kwadrat kwadrat("Kwadrek", 4);
+        Kwadrat& refDoKwadrat = kwadrat;
 
-    Prostokat& referencjaDoProstokat1 = prostokat;
+        double r0 = refDoKwadrat.promienKolaWgPola();
+        double r1 = refDoKwadrat.promenOkreguWgObwodu();
 
-    cout << referencjaDoProstokat1.doTekstu() << endl << endl;
-
-    Prostokat& referencjaDoProstokat2 = kwadrat;
-
-    cout << referencjaDoProstokat2.doTekstu() << endl << endl;
+        cout << "ro=" << r0 << endl << "r1=" << r1 << endl;
 
 
 
 
-    system("Pause");
+        system("Pause");
 
-    return 0;
-}
+        return 0;
+    }
 
 
 
