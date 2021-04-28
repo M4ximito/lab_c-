@@ -3,9 +3,20 @@
 #include "ustawienia.h"
 #include "generatorlosowy.h"
 #include "sasiedztwo.h"
-
+#include "nisza.h"
+#include "osobniki.h"
 
 using namespace std;
+
+static Nisza n1, n2, n3;
+
+static char sep = UstawieniaSymulacji::pobierzUstawienia().znakSeparator;
+
+void wyswietlNisze()
+{
+    cout << n1.jakiSymbol() << sep << n2.jakiSymbol() << sep << n3.jakiSymbol() << endl;
+}
+
 
 void drukujOrganizm(const Organizm& o)
 {
@@ -42,7 +53,7 @@ string nazwaRodzaju(RodzajMieszkanca rodzaj) {
 
 int main() {
     /////////////lab 03/////////////////
-     /*//1. Test kreacji obiektów
+     /* //1. Test kreacji obiektów
      Organizm organizm1(13,3,2);
      Organizm organizm2 = organizm1;
      Organizm organizm3(organizm1);
@@ -143,7 +154,7 @@ int main() {
        cout << GEN::losujPomiedzy(max, min) <<" ";
 
      cout << endl << endl;
-   */
+  
    //////////////////////lab05//////////////////////
     Sasiedztwo sasiedztwo;
 
@@ -198,9 +209,47 @@ int main() {
 
         cout << " położenie: " << p << " ->[" << wiersz
             << "][" << kolumna << "]" << endl;
-    }
+    } */
 
-    cout << endl;
+    //Laboratorium 7
+
+cout << "Puste nisze: ";
+wyswietlNisze();
+
+cout << "Lokowanie mieszkańców: ";
+n1.przyjmijLokatora(new Glon());
+n3.przyjmijLokatora(new Grzyb());
+wyswietlNisze();
+
+cout << "Przesuwanie lokatorów: ";
+n2 = n1;
+wyswietlNisze();
+
+cout << "Przesuwanie lokatorów:";
+n3 = n2;
+wyswietlNisze();
+
+cout << endl;
+
+
+//Global function(Laboratorium 5)
+string nazwaRodzaju(RodzajMieszkanca rodzaj) {
+    switch (rodzaj) {
+    case GLON:
+        return "GLON";
+    case GRZYB:
+        return "GRZYB";
+    case BAKTERIA:
+        return "BAKTERIA";
+    case PUSTKA:
+        return "PUSTKA";
+    case SCIANA:
+        return "SCIANA";
+    case TRUP:
+        return "TRUP";
+    case NIEZNANE:
+        return "NIEZNANE";
+    }
 
 
     return 0;

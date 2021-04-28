@@ -1,7 +1,6 @@
 #include <iostream>
 #include "zlab06.h"
 
-using namespace std;
 
 
 
@@ -40,7 +39,7 @@ int main() {
     //lab02.zadanie_2_8();
     //lab02.zadanie_2_9();
      lab02.menu();
-    --------------------------------------*/
+   
         Kwadrat kwadrat("Kwadrek", 4);
         Kwadrat& refDoKwadrat = kwadrat;
 
@@ -48,14 +47,14 @@ int main() {
         double r1 = refDoKwadrat.promenOkreguWgObwodu();
 
         cout << "ro=" << r0 << endl << "r1=" << r1 << endl;
-
+ --------------------------------------*/
 
 
 
         system("Pause");
 
         return 0;
-    }
+    }   
 
 
 
