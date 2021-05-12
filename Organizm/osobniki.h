@@ -10,7 +10,7 @@ public:
 	Glon();
 
 	virtual RodzajMieszkanca kimJestes() final;
-	virtual ZamiarMieszkanca wybierzAkcje(sasiedztwo sasiedztwo);
+	virtual ZamiarMieszkanca wybierzAkcje(Sasiedztwo sasiedztwo);
 	virtual Mieszkaniec* dajPotomka();
 	virtual void przyjmijZdobycz(Mieszkaniec* mieszkaniec);
 };
@@ -21,7 +21,7 @@ public:
 	Grzyb();
 
 	virtual RodzajMieszkanca kimJestes() final;
-	virtual ZamiarMieszkanca wybierzAkcje(sasiedztwo sasiedztwo);
+	virtual ZamiarMieszkanca wybierzAkcje(Sasiedztwo sasiedztwo);
 	virtual Mieszkaniec* dajPotomka();
 	virtual void przyjmijZdobycz(Mieszkaniec* mieszkaniec);
 };
@@ -32,7 +32,7 @@ public:
 	Bakteria();
 
 	virtual RodzajMieszkanca kimJestes() final;
-	virtual ZamiarMieszkanca wybierzAkcje(sasiedztwo sasiedztwo);
+	virtual ZamiarMieszkanca wybierzAkcje(Sasiedztwo sasiedztwo);
 	virtual Mieszkaniec* dajPotomka();
 	virtual void przyjmijZdobycz(Mieszkaniec* mieszkaniec);
 };
