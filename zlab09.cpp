@@ -1,4 +1,6 @@
-﻿#include "zlab09.h"
+﻿#include <iostream>
+#include "zlab09.h"
+
 
 void Zlab09::rozmiary()
 {

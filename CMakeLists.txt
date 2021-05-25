@@ -10,4 +10,4 @@ add_executable(lab_c_
         zlab02.cpp
         zlab02.h
         zlab03.cpp
-        zlab03.h "Organizm/organizm.cpp" "Organizm/organizm.h" "Organizm/main.cpp" "Organizm/ustawienia.h" "Organizm/generatorlosowy.h" "Organizm/generatorlosowy.cpp" "Organizm/sasiedztwo.h" "Organizm/sasiedztwo.cpp" "zlab06.cpp" "zlab06.h" "Mieszkaniec.cpp"  "Organizm/osobniki.cpp" "Organizm/nisza.h" "zlab09.h" "zlab09.cpp")
+        zlab03.h "Organizm/organizm.cpp" "Organizm/organizm.h" "Organizm/main.cpp" "Organizm/ustawienia.h" "Organizm/generatorlosowy.h" "Organizm/generatorlosowy.cpp" "Organizm/sasiedztwo.h" "Organizm/sasiedztwo.cpp" "zlab06.cpp" "zlab06.h" "Mieszkaniec.cpp"  "Organizm/osobniki.cpp" "Organizm/nisza.h" "zlab09.h" "zlab09.cpp" "zlab10.cpp" "zlab10.h" "LibraryImport.h")
